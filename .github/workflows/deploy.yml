@@ -14,4 +14,4 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Trigger redeploy on Docker host
-      run: curl -X POST http://10.47.101.53:9701/redeploy
+      run: curl -X POST https://ha57012339e.andrewholloway.info/api/webhook/l2LSQ8qqLwsiZhDSjmCsBaav9

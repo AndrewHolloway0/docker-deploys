@@ -3,6 +3,9 @@
 # Navigate to the repository directory
 cd /home/andrew/docker-deploys
 
+# Switch the git branch to the docker
+#git switch container-name
+
 # Pull the latest changes from GitHub
 git pull origin main
 
@@ -10,7 +13,7 @@ git pull origin main
 #docker compose down -f docker-compose-x.yml
 
 # Stop affected container
-docker stop container-name
+#docker stop container-name
 
 # Rebuild and start containers
-docker compose up -d -f docker-compose-x.yml
+#docker compose up -d -f docker-compose-x.yml
