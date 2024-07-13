@@ -1,0 +1,43 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/settings
+
+title: A&Y Services
+
+theme: dark
+color: slate
+headerStyle: clean
+hideErrors: true
+
+background:
+#  image: https://images.unsplash.com/photo-1601042879364-f3947d3f9c16?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+#  image: https://images.unsplash.com/photo-1704104426502-bce239528774?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+  image: https://source.unsplash.com/random/900%C3%97700/?night_city
+  blur: sm # sm, "", md, xl... see https://tailwindcss.com/docs/backdrop-blur
+  saturate: 50 # 0, 50, 100... see https://tailwindcss.com/docs/backdrop-saturate
+  brightness: 50 # 0, 50, 75... see https://tailwindcss.com/docs/backdrop-brightness
+  opacity: 50 # 0-100
+
+cardBlur: sm
+
+providers:
+  openweathermap: openweathermapapikey
+  weatherapi: weatherapiapikey
+
+useEqualHeights: true
+disableCollapse: true
+
+layout:
+  Social:
+  Entertainment:
+  Home Control & Apps:
+    style: row
+    columns: 3
+  Media Control:
+    style: row
+    columns: 3
+  Management:
+    style: row
+    columns: 4
+  Docker Services:
+  Game Servers:

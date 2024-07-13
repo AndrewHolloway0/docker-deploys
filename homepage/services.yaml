@@ -1,0 +1,135 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/services
+
+- Home Control & Apps:
+    - Home Assistant:
+        icon: home-assistant.png
+        href: http://10.47.102.169:8123
+        description: Lights and smart controls
+#        widget:
+#            type: homeassistant
+#            url: http://10.47.102.169:8123
+#            key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjYWNkZTNiMTg2NTU0NjNlYjAyNjI2YjgwNWE5NzE1ZiIsImlhdCI6M>
+    - Jellyfin:
+        icon: jellyfin.png
+        href: http://10.47.102.178:8096
+        description: Watch movies and series
+#        widget:
+#          type: jellyfin
+#          url: http://10.47.102.178:8096
+#          key: 626c438c5d2e417e845e324d63ee050b
+#    - Password Vault:
+#        icon: bitwarden.png
+#        href: https://pw-vault.andrewholloway.info
+#        description: Bitwarden password manager
+    - Mealie:
+        icon: mealie.png
+        href: http://10.47.101.53:9925
+        description: Weekly meal planning
+
+- Media Control:
+    - Radarr:
+        icon: radarr.png
+        href: http://10.47.102.181:7878/
+        description: Get new movies
+        widget:
+          type: radarr
+          url: http://10.47.102.181:7878
+          key: 75c8a2e43487408f897abc08485cc671
+    - Sonarr:
+        icon: sonarr.png
+        href: http://10.47.102.181:8989/
+        description: Get new shows
+        widget:
+          type: sonarr
+          url: http://10.47.102.181:8989
+          key: 862f003f12334cdaa194f88d676d39c8
+    - Readarr:
+        icon: readarr.png
+        href: http://10.47.102.181:8787/
+        description: Get new books
+        widget:
+          type: readarr
+          url: http://10.47.102.181:8787
+          key: 2bf2c9755a864f3daed598072bbe5259
+    - Prowlarr:
+        icon: prowlarr.png
+        href: http://10.47.102.181:9696
+        description: Movie and TV lists
+        widget:
+          type: prowlarr
+          url: http://10.47.102.181:9696
+          key: 7673d7bb724b45c4870ebf36e0ae9ed5
+    - qBittorrent:
+        icon: qbittorrent.png
+        href: http://10.47.102.181:8080/
+        description: Torrent downloaded
+        widget:
+          type: qbittorrent
+          url: http://10.47.102.181:8080
+          username: admin
+          password: P@ssw0rd!!@@
+
+- Management:
+    - Unifi:
+        icon: unifi.png
+        href: http://10.47.101.1/
+        description: Unifi Network Controller
+#        widget:
+#          type: unifi
+#          url: https://10.47.101.1
+#          username: andrew.k.holloway@hotmail.com
+#          password: GoF65nPJZ2YRh4
+    - Synology NAS:
+        icon: synology.png
+        href: http://10.47.101.11:5000/
+        description: Synology Disk Station
+    - Proxmox:
+        icon: proxmox.png
+        href: https://10.47.102.162:8006
+        description: Proxmox VE
+#        widget:
+#            type: proxmox
+#            url: https://10.47.102.162:8006
+#            username: api@pam!homepage
+#            password: b133e634-849e-4e55-b114-c08799577941
+#            node: pve
+    - Blog Site:
+        icon: wordpress.png
+        href: http://10.47.101.53:8083/wp-admin
+        description: Wordpress admin
+
+
+- Docker Services:
+    - Cloudflared:
+        icon: cloudflare.png
+        description: andrewholloway.info tunnel service
+        server: my-docker
+        container: cloudflaretunnel
+    - Mealie:
+        icon: mealie.png
+        href: http://10.47.101.53:9925
+        description: Weekly meal planning
+        server: my-docker
+        container: mealie
+    - Uptime Kuma:
+        icon: uptime-kuma.png
+        href: http://10.47.101.53:3001/status/all
+        description: Service monitoring
+        server: my-docker
+        container: uptime-kuma
+    - Homepage:
+        icon: homepage.png
+        description: Homepage service
+        server: my-docker
+        container: homepage
+
+- Game Servers:
+    - Blossom Valley:
+        icon: minecraft.png
+        description: Minecraft server
+        widget:
+            type: minecraft
+            url: udp://10.47.101.60:25566
+

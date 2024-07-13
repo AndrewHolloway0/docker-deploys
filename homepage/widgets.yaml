@@ -1,0 +1,23 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/service-widgets
+
+#- resources:
+#    cpu: true
+#    memory: true
+#    disk: /
+
+- search:
+    provider: google
+    target: _blank
+
+- datetime:
+    text_size: xl
+    format:
+      timeStyle: short
+
+- unifi_console:
+    type: unifi
+    url: https://10.47.101.1
+    username: andrew.k.holloway@hotmail.com
+    password: GoF65nPJZ2YRh4
