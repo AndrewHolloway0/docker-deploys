@@ -1,0 +1,15 @@
+version: "3.3"
+services:
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    ports:
+      - 3180:3000
+    env_file: .env
+    volumes:
+      - ./config:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      PUID: 1000
+      PGID: 119
+    restart: unless-stopped

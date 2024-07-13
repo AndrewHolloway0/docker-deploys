@@ -1,0 +1,17 @@
+name: Deploy to Docker
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Trigger redeploy on Docker host
+      run: curl -X POST http://10.47.101.53:9701/redeploy

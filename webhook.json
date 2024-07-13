@@ -1,0 +1,7 @@
+[
+    {
+      "id": "redeploy",
+      "execute-command": "/home/andrew/docker-deploys/redeploy.sh",
+      "command-working-directory": "/home/andrew/docker-deploys"
+    }
+]
