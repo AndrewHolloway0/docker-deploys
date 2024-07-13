@@ -3,17 +3,29 @@
 # Navigate to the repository directory
 cd /home/andrew/docker-deploys
 
-# Switch the git branch to the docker
-#git switch container-name
+# Fetch all github file changes
+git fetch --all
+
+# Stash/save any local file changes since last pull
+git stash
 
 # Pull the latest changes from GitHub
-git pull origin main
+git pull
 
-# Stop and remove existing containers
-#docker compose down -f docker-compose-x.yml
+# Restore local file changes
+git stash pop
 
 # Stop affected container
-#docker stop container-name
+#docker stop homepage
+docker stop mealie
+#docker stop uptime-kuma
+
+# Pull (latest?) version of compose
+#docker pull -f docker-compose-homepage.yml
+docker pull -f docker-compose-mealie.yml
+#docker pull -f docker-compose-uptimekuma.yml
 
 # Rebuild and start containers
-#docker compose up -d -f docker-compose-x.yml
+#docker compose up -d -f docker-compose-homepage.yml
+docker compose up -d -f docker-compose-mealie.yml
+#docker compose up -d -f docker-compose-uptimekuma.yml
