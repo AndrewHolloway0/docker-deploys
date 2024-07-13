@@ -13,5 +13,5 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Trigger redeploy on Docker host
+    - name: Trigger redeploy for Docker host, via Home Assistant webhook
       run: curl -X POST "https://ha57012339e.andrewholloway.info/api/webhook/${{ secrets.HA_WEBHOOK_KEY }}"
